@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>Dashboard</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://cdn.jsdelivr.net/gh/FogNetwork/ABC/index.js"></script>
+</head>
+<body>
+<center>
+
+<h1 class="title">ProxyCloak</h1>
+<textarea id="code" spellcheck="false">
+//Creates new Proxy
+var page = new Proxy({
+    "type": "blank", //Blank, blob, or overwrite
+    "url": "https://example.com" //Any url
+})
+page.setType("blank")
+page.setUrl("https://example.com") //CHANGE THIS TO PROXY LINK!
+console.log(page.getCode())
+page.open()</textarea>
+
+<br>
+
+<button class="run" onclick="eval(document.getElementById('code').value)">Load</button>
+</center>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+* {
+font-family: "Open Sans";
+}
+
+center {
+display: block;
+text-align: -webkit-center;
+}
+
+.title {
+font-size: 60px;
+}
+
+body {
+background-color: #00008B;
+color: darkblue;
+-webkit-text-stroke: 0.01px lightgrey;
+}
+
+#code {
+width: 400px;
+height: 241px;
+font-size: 15px;
+resize: none;
+border: 2px solid black;
+border-radius: 2.5px;
+background-color: #00008B;
+border-color: #656c6f;
+color: #c9c9ca;
+-webik-text-stroke: 0.25px black;
+
+}
+
+.run {
+height: 40px;
+width: 80px;
+font-size: 30px;
+color: darkgrey;
+-webkit-text-stroke: 1px lightgrey;
+cursor: pointer;
+margin: 10px;
+background: transparent;
+border: 2px solid #656c6f;
+border-radius: 2.5px;
+}
+</style>
+
+</body>
+</html>
